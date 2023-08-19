@@ -1,0 +1,15 @@
+## To create link between remote and local repo (enables checking for any changes on remote branch)
+
+git branch --set-upstream-to=origin/master master 
+git fetch origin
+git merge origin/master
+
+## fatal: refusing to merge unrelated histories 
+
+git pull origin master --allow-unrelated-histories
+
+## To unstage all the files in your last commit, use the following git command: git reset HEAD~.
+To stash your unsaved files, use the following git command: git stash.
+This will give you a clean working tree to pull your remote repository into. Once you’ve successfully pulled into your branch, you can unstash your files, commit them as a separate commit and resolve any file conflicts that you may have.
+
+To unstash your files, use git pop. This will move the changes stashed and reapplies them to your current working copy.
